@@ -1,33 +1,17 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import ColorModeProvider from "@/theme/ColorModeProvider";
 
 export const metadata: Metadata = {
-  title: "Next js Social Profile Links",
-  description: "Create your social profile links page using Next.js and Material UI",
+  title: "Social Profile",
+  description: "Minimal profile with links",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html lang="en" suppressHydrationWarning>
+      <body>
+        <ColorModeProvider>{children}</ColorModeProvider>
       </body>
     </html>
   );
