@@ -1,17 +1,25 @@
-import Image from "next/image";
+"use client";
+
 import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
 import React from "react";
 import Card from "../components/Cards";
 
-const Home = () => {
+export default function Home() {
   return (
-    <Box 
-    sx={{ backgroundColor: "#141414", display: "flex", justifyContent: "center", alignItems: "center" }}
-    className="container">
-      <Card/>
-    </Box>
+    <main>
+      <Box
+        component="section"
+        aria-label="Profile links"
+        sx={{
+          backgroundColor: "#141414",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+        className="container"
+      >
+        <Card />
+      </Box>
+    </main>
   );
 }
-
-export default Home;

@@ -5,20 +5,47 @@ html{
   margin: 0;
 }
 
-.neon{
-  color: #00b4d8
-}
+.neon{ color: #00b4d8; }
 
-.cardBackground{
-  background-color: #1f1f1f;
-}
+.cardBackground{ background-color: #1f1f1f; }
 
-.linkBackground{
-  background-color: #333333;
-}
+.linkBackground{ background-color: #333333; }
 
 .container {
   min-height: 98vh;
   width: 98vw;
   overflow: hidden;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Sheen morbido per i bottoni link */
+.linkItem {
+  overflow: hidden;
+  isolation: isolate;
+}
+.linkItem .sheen {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255,255,255,0.06) 40%,
+    rgba(255,255,255,0.12) 50%,
+    rgba(255,255,255,0.06) 60%,
+    transparent 100%
+  );
+  transform: translateX(-120%);
+  transition: transform 700ms ease;
+  pointer-events: none;
+  z-index: 0;
+}
+.linkItem:hover .sheen {
+  transform: translateX(120%);
+}
+
+/* Focus visibile anche via tastiera, non solo mouse */
+.linkItem:focus-within {
+  outline: 2px solid #00b4d8;
+  outline-offset: 2px;
 }
