@@ -12,8 +12,14 @@
 ## ✨ Overview
 
 A minimalist **personal profile card** built with **Next.js 15 (App Router)**, **MUI**, and **GSAP**, featuring animated entry transitions, text splitting, and light/dark mode toggle.
+Perfect for campaigns: tiny payloads, instant TTI, and clean SEO.
+Links is a minimal, high-performance micro-site designed to replace generic link-in-bio tools with a brand-consistent experience.
+All content is config-driven: titles, colors, and call-to-action cards are editable via a single JSON file — instantly deployable for new campaigns.
+Built with Next.js and TypeScript, it loads instantly with zero layout shift, Open Graph optimization, and graceful fallbacks for missing metadata.
+The modular design supports analytics hooks, responsive breakpoints, and custom styling — perfect for artists, agencies, or brand landing hubs.
 
-![screenshot](public/preview.jpg)
+[Live Demo](https://links.simoneconti.work/) 
+
 
 This project is a clean, hiring-ready example of modern front-end engineering and design detail.
 
